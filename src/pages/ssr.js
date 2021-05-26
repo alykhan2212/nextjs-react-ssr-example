@@ -1,11 +1,10 @@
 import React from 'react';
 import axios from 'axios';
 
-const Index = (props) => {
+const Ssr = (props) => {
 
   return (
     <div>
-      <h1>Hello from Next js</h1>
       <p>SSR: {props.text}</p>
       <img src={props.value} />
     </div>
@@ -23,4 +22,4 @@ export const getStaticProps = async () => {
   };
 };
 
-export default Index;
+export default Ssr;

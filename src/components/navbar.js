@@ -5,13 +5,18 @@ const Navbar = () => {
   return (
     <div>
       <ul>
+      <li>
+          <Link href="/">
+            <a>Home</a>
+          </Link>
+        </li>
         <li>
-          <Link href="/server-side-render">
+          <Link href="/ssr">
             <a>SSR</a>
           </Link>
         </li>
         <li>
-          <Link href="/client-side-render">
+          <Link href="/csr">
             <a>CSR</a>
           </Link>
         </li>

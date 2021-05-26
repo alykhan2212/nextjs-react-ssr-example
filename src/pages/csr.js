@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const About = (props) => {
+const Csr = (props) => {
 
   const [joke, setJoke] = useState('');
 
@@ -17,9 +17,8 @@ const About = (props) => {
 
   return (
     <div>
-      <h1>Hello from Next js</h1>
-      <p>SSR: {joke}</p>
+      <p>CSR: {joke}</p>
     </div>)
 };
 
-export default About;
+export default Csr;
