@@ -1,6 +1,6 @@
 
 const Posts = ({ data }) => {
-    console.log(data)
+    // console.log(data)
     return (
         <div>
             <h1>{data.fields.title}</h1>
