@@ -18,7 +18,7 @@ export async function getStaticProps() {
 }
 
 const Index = ({ posts  }) => {
-  console.log(posts)
+  // console.log(posts)
   return (
     <div>
       {
