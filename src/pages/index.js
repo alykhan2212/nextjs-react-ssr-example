@@ -1,11 +1,32 @@
-import React from 'react';
+import { createClient } from 'contentful';
+import Posts from '../components/Posts';
 
-const Index = (props) => {
+export async function getStaticProps() {
 
+  const client = createClient({
+    space: process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONTENTFUL_ACCESS_KEY,
+  })
+
+  const res = await client.getEntries({ content_type: "posts" })
+
+  return {
+    props: {
+      posts: res.items,
+    }
+  }
+}
+
+const Index = ({ posts  }) => {
+  console.log(posts)
   return (
     <div>
-      <h1>Hello from Next js</h1>
-      <p>Nextjs react server side rendering example application</p>
+      {
+        posts.map(post => (
+          <Posts key={post.sys.id} data={post} />
+        ))
+
+      }
     </div>
   );
 };
