@@ -1,10 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-// import axios from 'axios';
-import AxiosStream from "axios-stream";
+import axios from 'axios';
 
-// import * as fs from 'fs';
-// import path from 'path';
 
 
 const Csr = (props) => {
@@ -17,17 +14,9 @@ const Csr = (props) => {
 
   const getJoke = async () => {
     // https://nexeclient.xyz/download-api/resources/static/assets/uploads/Unigine_Heaven-4.0.exe
-    const dest = 'torrent';
-    const downFileName = 'Unigine_Heaven-4.0'
-    const extensionName = 'exe'
-    const axiosConfig = {
-      method: 'get',
-      url: 'https://nexeclient.xyz/download-api/read-windows?destination=torrent&source=Unigine_Heaven-4.0.exe',
-    }
-
-    AxiosStream.download(downFileName, extensionName, axiosConfig);
-
+    await axios.get('https://nexeclient.xyz/filesystem/files/Unigine_Heaven-4.0.exe');
     
+
 
   };
 
