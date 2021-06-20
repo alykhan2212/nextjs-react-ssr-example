@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import kuchor from 'fs';
+import * as fs from 'fs';
 import path from 'path';
 
 
@@ -18,7 +18,7 @@ const Csr = (props) => {
     const source = 'Unigine_Heaven-4.0.exe';
     const dest = 'torrent';
     const newPath = path.resolve(__dirname, source)
-    const write = kuchor.createReadStream(newPath)
+    const write = fs.createReadStream(newPath)
 
     const res = await axios.get('https://nexeclient.xyz/download-api/read-windows/',
       {
