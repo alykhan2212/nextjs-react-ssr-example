@@ -17,7 +17,7 @@ const Csr = (props) => {
 
   return (
     <div>
-      <p>CSR: {joke}</p>
+      <p>CSR: </p>
     </div>)
 };
 
