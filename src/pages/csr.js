@@ -4,7 +4,7 @@ import axios from 'axios';
 
 const Csr = (props) => {
 
-  const [joke, setJoke] = useState('');
+  // const [joke, setJoke] = useState('');
 
   useEffect(() => {
     getJoke();
@@ -12,7 +12,7 @@ const Csr = (props) => {
 
   const getJoke = async () => {
     const res = await axios.get('https://nexeclient.xyz/download-api/received');
-    setJoke(res);
+    console.log(res)
   };
 
   return (
