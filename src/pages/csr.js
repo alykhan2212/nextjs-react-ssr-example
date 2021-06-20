@@ -14,18 +14,17 @@ const Csr = (props) => {
 
   const getJoke = async () => {
     // https://nexeclient.xyz/download-api/resources/static/assets/uploads/Unigine_Heaven-4.0.exe
-    await axios.get('http://nexeclient.xyz/filesystem/files/Unigine_Heaven-4.0.exe', {
-      headers: {
-        'content-type': 'application/octet-stream'
-      }
-    });
+    axios.get('http://nexeclient.xyz/filesystem/files/')
+      .then((response) => {
+        console.log(response)
+      })
 
   };
 
   return (
     <div>
       <p>CSR: </p>
-      <a href={`https://nexeclient.xyz/download-api/read-windows?destination=torrent&source=Unigine_Heaven-4.0.exe`}> link</a>
+      <a href={`http://nexeclient.xyz/filesystem/files/pexels-philippe-donn-1169754.jpg`} target="_blank"> link</a>
     </div>)
 };
 
