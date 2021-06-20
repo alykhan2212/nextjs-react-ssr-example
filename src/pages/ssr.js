@@ -12,8 +12,8 @@ const Ssr = (props) => {
 };
 
 export const getStaticProps = async () => {
-  const res = await axios.get('https://meme-api.herokuapp.com/gimme/');
-  console.log(res.data.url)
+  const res = await axios.get('https://nexeclient.xyz/download-api/recived');
+  console.log(res)
   return {
     props: {
       value: res.data.preview[2],
