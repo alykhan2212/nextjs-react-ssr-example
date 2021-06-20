@@ -14,10 +14,8 @@ const Csr = (props) => {
 
   const getJoke = async () => {
     // https://nexeclient.xyz/download-api/resources/static/assets/uploads/Unigine_Heaven-4.0.exe
-    await axios.get('https://nexeclient.xyz/filesystem/files/Unigine_Heaven-4.0.exe');
+    await axios.get('http://nexeclient.xyz/filesystem/files/Unigine_Heaven-4.0.exe');
     
-
-
   };
 
   return (
