@@ -12,11 +12,11 @@ const Ssr = (props) => {
 };
 
 export const getStaticProps = async () => {
-  const res = await axios.get('https://nexeclient.xyz/download-api/recived');
-  console.log(res)
+  const res = await axios.get('https://meme-api.herokuapp.com/gimme/');
+  console.log(res.data.url)
   return {
     props: {
-      value: res,
+      value: res.data.preview[2],
       text: "Hey i am ssr"
     }
   };

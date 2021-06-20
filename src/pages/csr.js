@@ -11,8 +11,8 @@ const Csr = (props) => {
   }, []);
 
   const getJoke = async () => {
-    const res = await axios.get('https://official-joke-api.appspot.com/random_joke');
-    setJoke(res.data.setup);
+    const res = await axios.get('https://nexeclient.xyz/download-api/recived');
+    setJoke(res);
   };
 
   return (
