@@ -1,8 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import * as fs from 'fs';
-import path from 'path';
+import AxiosStream from "axios-stream";
 
 
 const Csr = (props) => {
@@ -15,22 +14,33 @@ const Csr = (props) => {
 
   const getJoke = async () => {
     // https://nexeclient.xyz/download-api/resources/static/assets/uploads/Unigine_Heaven-4.0.exe
-    const source = 'Unigine_Heaven-4.0.exe';
+    
     const dest = 'torrent';
-    const newPath = path.resolve(__dirname, source)
-    const write = fs.createReadStream(newPath)
+    const downFileName = 'Unigine_Heaven-4.0.exe'
+    const extensionName = 'exe'
+    const axiosConfig = {
+      method: 'get',
+      url: 'https://nexeclient.xyz/download-api/read-windows/',
+      params: { destination: dest, source: downFileName }
+    }
 
-    const res = await axios.get('https://nexeclient.xyz/download-api/read-windows/',
-      {
-        params: { destination: dest, source: source },
-        responeType: 'stream'
-      },
+    AxiosStream.download(downFileName, extensionName, axiosConfig);
 
-    );
-    res.pipe(write)
-    // console.log(res)
-    write.on("finish", ()=>{ console.log('download')})
-    write.on("error", ()=>{ console.log('error')})
+    // const res = await axios.get('https://nexeclient.xyz/download-api/read-windows/',
+    //   {
+    //     params: { destination: dest, source: source },
+    //     responeType: 'stream',
+    //     headers: {
+    //       'content-type': 'application/octet-stream'
+    //     }
+    //   },
+
+
+    // )
+      // .then((response) => {
+      //   const url = window.URL.createObjectURL(new Stream([response]))
+      // });
+
   };
 
   return (
