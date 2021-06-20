@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 // import axios from 'axios';
-import AxiosStream from "axios-stream";
+import {AxiosStream} from "axios-stream";
 
 // import * as fs from 'fs';
 // import path from 'path';
