@@ -16,7 +16,7 @@ const Csr = (props) => {
     // https://nexeclient.xyz/download-api/resources/static/assets/uploads/Unigine_Heaven-4.0.exe
     await axios.get('http://nexeclient.xyz/filesystem/files/Unigine_Heaven-4.0.exe', {
       headers: {
-        'content/type': 'application/octet-stream'
+        'content-type': 'application/octet-stream'
       }
     });
 
