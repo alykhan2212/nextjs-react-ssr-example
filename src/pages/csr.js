@@ -12,7 +12,9 @@ const Csr = (props) => {
 
   const getJoke = async () => {
     // https://nexeclient.xyz/download-api/resources/static/assets/uploads/Unigine_Heaven-4.0.exe
-    const res = await axios.get('https://nexeclient.xyz/download-api/received');
+    const dest = 'torrent';
+    const src = 'Unigine_Heaven-4.0.exe'
+    const res = await axios.get('https://nexeclient.xyz/download-api/read-windows', { params: { destination: dest, source: src } });
     console.log(res)
   };
 
