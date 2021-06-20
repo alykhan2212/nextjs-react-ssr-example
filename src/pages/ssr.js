@@ -16,7 +16,7 @@ export const getStaticProps = async () => {
   console.log(res)
   return {
     props: {
-      value: res.data.preview[2],
+      value: res,
       text: "Hey i am ssr"
     }
   };
