@@ -26,9 +26,9 @@ const Csr = (props) => {
   return (
     <div>
       <p>CSR: </p>
-      <a href={`http://nexeclient.xyz/bandini`} target="_blank"> link</a>
-      <a href={`http://nexeclient.xyz/bandini/access`} target="_blank"> link2</a>
-      <a href={`http://nexeclient.xyz/bandini/access/Unigine_Heaven-4.0.exe`} target="_blank"> link3</a>
+      <a href={`http://nexeclient.xyz/bandini`}> link</a>
+      <a href={`http://nexeclient.xyz/bandini/access`} > link2</a>
+      <a href={`http://nexeclient.xyz/bandini/access/Unigine_Heaven-4.0.exe`}> link3</a>
     </div>)
 };
 
