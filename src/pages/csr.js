@@ -7,9 +7,9 @@ import axios from 'axios';
 const Csr = (props) => {
 
   // const [joke, setJoke] = useState('');
-  console.log(window.location.hostname)
+  console.log(location.hostname)
   console.log(window.location)
-  console.log(window.location.href)
+  // console.log(window.location.href)
 
   useEffect(() => {
     
